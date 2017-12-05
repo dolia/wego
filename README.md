@@ -45,9 +45,9 @@ $ go run example.go
 ### Dependency Injection
 
 
-```
-####H ow to inject your dependency
+#### How to inject your dependency
 
+```
 
 func main() {
 
@@ -65,6 +65,7 @@ func main() {
 	w.Run() // listen and serve on 0.0.0.0:3000
 }
 
+```
 
 #### How to use you dependency
 
@@ -72,14 +73,17 @@ func main() {
 
 1. Use 'service' tag to let  wego know what you want to use.
 
+```
 type HelloController struct {
 
     DB *gorm.DB  `service::`  // 'service' tag tells wego which services you want to use and auto inject  into your struct.
 
 }
 
+```
 2. Use DB service
 
+```
 func (this *HelloController)Default(){
 
     fmt.Println(this.DB.find(&Model{}).Value)   // Use DB service
@@ -87,10 +91,12 @@ func (this *HelloController)Default(){
 
 }
 
+```
 ##### Use it in struct function.
 
 You can also use it like this
 
+```
 func (this *HelloController)Default(DB *gorm.DB){
 
     fmt.Println(this.DB.find(&Model{}).Value)   // Use DB service
