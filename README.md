@@ -99,7 +99,7 @@ You can also use it like this
 ```
 func (this *HelloController)Default(DB *gorm.DB){
 
-    fmt.Println(this.DB.find(&Model{}).Value)   // Use DB service
+    fmt.Println(DB.find(&Model{}).Value)   // Use DB service
 
 }
 
