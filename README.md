@@ -37,7 +37,7 @@ func main() {
 ```
 
 ```
-# run example.go and visit 0.0.0.0:8080/hello on browser
+# run example.go and visit 0.0.0.0:3000/hello on browser
 $ go run example.go
 
 ```
